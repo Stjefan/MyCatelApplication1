@@ -1,0 +1,26 @@
+﻿<catel:UserControl x:Class="MyCatelApplication1.Views.PersonView"
+                   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                   xmlns:catel="http://schemas.catelproject.com">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="First name" />
+        <Label Grid.Row="0" Grid.Column="1" Content="{Binding FirstName}" />
+
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Weight" />
+        <Label Grid.Row="1" Grid.Column="1" Content="{Binding Weight}" />
+    </Grid>
+
+</catel:UserControl>

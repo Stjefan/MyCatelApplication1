@@ -1,0 +1,23 @@
+﻿<catel:DataWindow x:Class="MyCatelApplication1.Views.FamilyWindow"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:catel="http://schemas.catelproject.com">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBox Grid.Row="0" Text="{Binding FamilyName}" />
+        <ListBox Grid.Row="1" x:Name="listBox" ItemsSource="{Binding Persons}" SelectedItem="{Binding SelectedPerson}"/>
+        <StackPanel Grid.Row="2">
+            <Button Command="{Binding AddPerson}" Content="Add..." />
+            <Button Command="{Binding EditPerson}" Content="Edit..." />
+            <Button Command="{Binding RemovePerson}" Content="Remove" />
+        </StackPanel>
+        <TextBlock Text="{Binding SelectedPerson.FirstName}"/>
+    </Grid>
+    
+</catel:DataWindow>
