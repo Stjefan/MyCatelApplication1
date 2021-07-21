@@ -8,6 +8,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <TextBox Grid.Row="0" Text="{Binding FamilyName}" />
@@ -17,7 +18,7 @@
             <Button Command="{Binding EditPerson}" Content="Edit..." />
             <Button Command="{Binding RemovePerson}" Content="Remove" />
         </StackPanel>
-        <TextBlock Text="{Binding SelectedPerson.FirstName}"/>
+        <TextBlock Grid.Row="3" Text="{Binding SelectedPerson.FirstName}"/>
     </Grid>
     
 </catel:DataWindow>
